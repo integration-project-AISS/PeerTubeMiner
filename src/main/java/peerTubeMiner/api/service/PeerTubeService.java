@@ -72,7 +72,7 @@ public class PeerTubeService {
     // Enviar a VideoMiner
     public void sendToVideoMiner(VMChannel channel) {
         try {
-            restTemplate.postForObject(videoMinerBaseUrl + "/channels", channel, VMChannel.class);
+            restTemplate.postForObject(videoMinerBaseUrl + "/api/channels", channel, VMChannel.class);
             System.out.println("Canal de PeerTube enviado con éxito a VideoMiner");
         } catch (Exception e) {
             System.err.println("Error al conectar con VideoMiner: " + e.getMessage());
